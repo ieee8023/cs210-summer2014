@@ -4,6 +4,9 @@ public class Rotation
 {
   public static void main(String [] args)
   {
+	  // set this to true once you finish visualize();
+	  boolean show = false;    
+	  
     LinkedBinaryTree<String> greatgrandchildLeft = new LinkedBinaryTree<String>("3");
     LinkedBinaryTree<String> grandchildLeft = new LinkedBinaryTree<String>("5", greatgrandchildLeft, null);
     LinkedBinaryTree<String> grandchildRight = new LinkedBinaryTree<String>("10", null, null);
@@ -22,6 +25,7 @@ public class Rotation
     Iterator<String> itr = rightTree.iteratorLevelOrder();
     while (itr.hasNext())
       System.out.println(itr.next());
+    if (show) rightTree.visualize();
     
     rightTree.rotateRight();
     
@@ -30,11 +34,13 @@ public class Rotation
     while (itr.hasNext())
       System.out.println(itr.next());
     System.out.println();
+    if (show) rightTree.visualize();
     
     System.out.println("Contents of leftTree before left rotation");
     itr = leftTree.iteratorLevelOrder();
     while (itr.hasNext())
       System.out.println(itr.next());
+    if (show) leftTree.visualize();
     
     leftTree.rotateLeft();
     
@@ -42,5 +48,6 @@ public class Rotation
     itr = leftTree.iteratorLevelOrder();
     while (itr.hasNext())
       System.out.println(itr.next());
+    if (show) leftTree.visualize();
   }
 }
