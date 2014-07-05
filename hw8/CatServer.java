@@ -71,10 +71,14 @@ public class CatServer {
 	
 	private static byte[] getCS210Sha1(String str) throws Exception{
 		
+		// part of java that gives us sha1
 		MessageDigest m = MessageDigest.getInstance("SHA-1");
 		
+		// get the sha1
+		byte[] sha1 = m.digest(str.getBytes("UTF-8"));
+		
 		// reduce complexity to only three bytes
-		byte[] cs210sha1 = Arrays.copyOf(m.digest(str.getBytes("UTF-8")), 3);
+		byte[] cs210sha1 = new byte[]{sha1[0], sha1[1], sha1[2]};
 		
 		return cs210sha1;
 	}
