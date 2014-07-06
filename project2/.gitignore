@@ -1,13 +1,3 @@
-/Dijkstra.class
-/Distances.class
-/EuclideanGraph$AdjListIterator.class
-/EuclideanGraph$Node.class
-/EuclideanGraph.class
-/In.class
-/IndexPQ.class
-/IntIterator.class
-/Paths.class
-/Point.class
-/ShortestPath.class
-/StdIn.class
-/Turtle.class
+*.class
+/.project
+/.classpath
