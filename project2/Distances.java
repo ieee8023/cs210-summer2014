@@ -15,7 +15,7 @@ public class Distances {
     public static void main(String[] args) {
 
         // read in the graph from a file
-        In graphin = new In("usa-1000long.txt");
+        In graphin = new In(args[0]);
         EuclideanGraph G = new EuclideanGraph(graphin);
         Dijkstra dijkstra = new Dijkstra(G);
         System.err.println("Done reading the graph " + args[0]);
